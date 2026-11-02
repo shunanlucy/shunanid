@@ -1655,6 +1655,8 @@ body.theme-light .chip-copy-badge {
 }
 
 .matrix-card {
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   padding: clamp(20px, 3.5vw, 28px);
@@ -1671,6 +1673,154 @@ body.theme-light .chip-copy-badge {
   border-color: var(--border-subtle);
   transform: translateY(-2px);
   box-shadow: var(--shadow-sculpt);
+}
+
+/* Ensure text & actions remain crisp and above background floating art */
+.matrix-top,
+.matrix-heading,
+.matrix-body,
+.matrix-pills {
+  position: relative;
+  z-index: 2;
+}
+
+/* =====================================================================
+   AESTHETIC FLOATING TOPIC BACKGROUND SCENE
+   ===================================================================== */
+.matrix-float-scene {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+  contain: layout paint;
+}
+
+/* Ambient Radial Glow in Card Corner */
+.float-glow {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  filter: blur(45px);
+  opacity: 0.16;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+}
+
+.matrix-card:hover .float-glow {
+  opacity: 0.28;
+  transform: scale(1.15);
+}
+
+.glow-amber { background: radial-gradient(circle, #f59e0b, transparent 70%); }
+.glow-emerald { background: radial-gradient(circle, #10b981, transparent 70%); }
+.glow-indigo { background: radial-gradient(circle, #6366f1, transparent 70%); }
+.glow-cyan { background: radial-gradient(circle, #25d366, transparent 70%); }
+.glow-rose { background: radial-gradient(circle, #f43f5e, transparent 70%); }
+.glow-blue { background: radial-gradient(circle, #3b82f6, transparent 70%); }
+
+/* Stylized Vector Watermark in Background */
+.float-watermark {
+  position: absolute;
+  right: -15px;
+  bottom: -15px;
+  width: 150px;
+  height: 150px;
+  opacity: 0.08;
+  color: var(--ink-primary);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+body.theme-light .float-watermark {
+  opacity: 0.06;
+  color: #0f172a;
+}
+
+.matrix-card:hover .float-watermark {
+  opacity: 0.16;
+  transform: scale(1.08) rotate(3deg);
+}
+
+body.theme-light .matrix-card:hover .float-watermark {
+  opacity: 0.12;
+}
+
+/* Floating Aesthetic Micro Badges / Chips */
+.float-chip {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-code);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(15, 17, 24, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--ink-secondary);
+  opacity: 0.45;
+  transition: opacity 0.4s ease, border-color 0.4s ease, transform 0.4s ease;
+  user-select: none;
+  pointer-events: none;
+}
+
+body.theme-light .float-chip {
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(0, 0, 0, 0.08);
+  color: var(--ink-primary);
+  opacity: 0.55;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.matrix-card:hover .float-chip {
+  opacity: 0.9;
+  border-color: var(--border-subtle);
+}
+
+.chip-pos-1 {
+  top: 14px;
+  right: 14px;
+  animation: floatGentle1 6.5s ease-in-out infinite;
+}
+
+.chip-pos-2 {
+  bottom: 14px;
+  right: 16px;
+  animation: floatGentle2 8s ease-in-out infinite;
+}
+
+.chip-pulse-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  opacity: 0.85;
+}
+
+@keyframes floatGentle1 {
+  0% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(-3px, -7px, 0) rotate(1.5deg); }
+  100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+}
+
+@keyframes floatGentle2 {
+  0% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(4px, -6px, 0) rotate(-1.5deg); }
+  100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float-chip {
+    animation: none;
+  }
 }
 
 .featured-matrix {
