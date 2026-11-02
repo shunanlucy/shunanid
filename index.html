@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Sourav S. Panja — Operations Lead, Accountant &amp; Product Developer</title>
+  <meta name="description" content="Portfolio of Sourav S. Panja (Shunan) — Operations Manager, Certified Accountant, and Mobile & Web Developer based in Kolkata, India.">
+  <meta name="theme-color" content="#090a0f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="icon" type="image/jpeg" href="assets/sourav_headshot_square.jpg">
+
+  <!-- Editorial Premium Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-dark">
+
+  <!-- Subtle Designer Background Mesh -->
+  <div class="canvas-mesh"></div>
+
+  <!-- ==============================================================
+       BESPOKE FLOATING NAVIGATION DOCK
+       ============================================================== -->
+  <header class="studio-header">
+    <div class="header-container container">
+      
+      <!-- Brand & Status -->
+      <a href="#hero" class="brand-unit">
+        <div class="avatar-ring">
+          <img src="assets/sourav_headshot_square.jpg" alt="Sourav Panja" class="nav-avatar-img">
+        </div>
+        <div class="brand-meta">
+          <span class="brand-title">Sourav S. Panja</span>
+          <span class="brand-subtitle">
+            <span class="status-indicator"></span> Kolkata • Available
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Matrix -->
+      <nav class="desktop-navigation">
+        <a href="#about" class="nav-anchor">About</a>
+        <a href="#services" class="nav-anchor">Expertise</a>
+        <a href="#work" class="nav-anchor">Selected Work</a>
+        <a href="#experience" class="nav-anchor">Experience</a>
+        <a href="#credentials" class="nav-anchor">Credentials</a>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-cta-group">
+        <button id="themeToggle" class="mode-toggle" aria-label="Toggle Theme" title="Toggle Appearance">
+          <span class="mode-icon">🌙</span>
+        </button>
+        <a href="assets/Sourav_Panja_CV.pdf" download="Sourav_S_Panja_CV.pdf" class="btn-subtle desktop-only">
+          <span>CV (PDF)</span>
+        </a>
+        <a href="https://wa.me/919007707714?text=Hi%20Sourav,%20I%20reviewed%20your%20portfolio%20and%20would%20love%20to%20connect!" target="_blank" class="btn-highlight">
+          <span>Connect</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="page-body">
+
+    <!-- ==============================================================
+         HERO SECTION: EDITORIAL ARCHITECTURAL LAYOUT
+         ============================================================== -->
+    <section id="hero" class="hero-stage">
+      <div class="container hero-layout">
+
+        <!-- Hero Content Column -->
+        <div class="hero-copy">
+          
+          <div class="kicker-pill">
+            <span class="kicker-dot"></span>
+            <span>Operations • Accounting • Mobile &amp; Web</span>
+          </div>
+
+          <h1 class="hero-display">
+            Managing ground operations.<br>
+            <span class="hero-display-muted">Building digital products.</span>
+          </h1>
+
+          <p class="hero-intro">
+            I am <strong>Sourav S. Panja</strong> (Shunan) — a multidisciplinary professional based in Kolkata. I manage tangible business operations — team recruitment, field logistics, and audited Tally accounting — while architecting Flutter apps, modern web platforms, and creator media that solve real problems.
+          </p>
+
+          <div class="hero-actions">
+            <a href="https://wa.me/919007707714?text=Hi%20Sourav,%20let's%20discuss%20an%20opportunity!" target="_blank" class="btn-solid">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.42 0-2.82-.37-4.06-1.07l-.29-.17-3.02.79.81-2.95-.19-.3a8.17 8.17 0 0 1-1.25-4.34c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.75-.67-1.25-1.49-1.4-1.74-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.56-1.35-.77-1.84-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.3-.23.25-.87.85-.87 2.08 0 1.23.89 2.42 1.02 2.59.13.17 1.76 2.69 4.27 3.77.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29"/></svg>
+              <span>Message on WhatsApp</span>
+            </a>
+            <a href="assets/Sourav_Panja_CV.pdf" download="Sourav_S_Panja_CV.pdf" class="btn-ghost">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>Download CV</span>
+            </a>
+          </div>
+
+          <!-- Grounded Metric Strip -->
+          <div class="metrics-grid">
+            <div class="metric-cell">
+              <span class="metric-value">6+</span>
+              <span class="metric-tag">Years Experience</span>
+            </div>
+            <div class="metric-cell">
+              <span class="metric-value">5+</span>
+              <span class="metric-tag">Shipped Products</span>
+            </div>
+            <div class="metric-cell">
+              <span class="metric-value">₹0</span>
+              <span class="metric-tag">Server Hosting Rent</span>
+            </div>
+            <div class="metric-cell">
+              <span class="metric-value">Tally</span>
+              <span class="metric-tag">Certified Accountant</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Portrait Column -->
+        <div class="hero-visual">
+          <div class="portrait-sculpture">
+            <div class="portrait-frame">
+              <img src="assets/sourav_portrait_hero.jpg" alt="Sourav S. Panja" class="portrait-img">
+              <div class="portrait-caption-tag">
+                <span class="caption-dot"></span>
+                <span>On-Site &amp; Remote Ready</span>
+              </div>
+            </div>
+
+            <!-- Direct Quick-Contact Pill Card -->
+            <div class="quick-connect-bar">
+              <a href="https://wa.me/919007707714?text=Hi%20Sourav,%20let's%20connect!" target="_blank" class="connect-action-chip wa-chip">
+                <span class="chip-icon">💬</span>
+                <span class="chip-label">WhatsApp Chat</span>
+                <span class="chip-corner-arrow">↗</span>
+              </a>
+              <button class="connect-action-chip" onclick="copyContactText('shunanexpo@gmail.com', 'Copied shunanexpo@gmail.com')">
+                <span class="chip-icon">✉️</span>
+                <span class="chip-label">shunanexpo@gmail.com</span>
+                <span class="chip-copy-badge">COPY</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================================
+         SECTION: ABOUT & PHILOSOPHY
+         ============================================================== -->
+    <section id="about" class="editorial-section">
+      <div class="container">
+        
+        <div class="section-label-row">
+          <span class="section-num">01</span>
+          <span class="section-title-label">BACKGROUND &amp; APPROACH</span>
+        </div>
+
+        <div class="editorial-grid">
+          <div class="editorial-column-primary">
+            <h2 class="editorial-headline">
+              Bridging physical reality with digital efficiency.
+            </h2>
+          </div>
+          <div class="editorial-column-secondary">
+            <p class="editorial-para">
+              Most businesses face a disconnect: operations people don't understand software, and developers rarely know how chaotic things get on the ground.
+            </p>
+            <p class="editorial-para">
+              Having spent years managing farm logistics, staff residential accommodations, salon front-desks, and internet cafe finances, I approach software with a pragmatic mindset. I build systems that actually save hours of manual labor, reduce operational expenses to ₹0 wherever possible, and drive verifiable customer footfalls.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================================
+         SECTION: WHAT I CAN DO (SERVICES & CAPABILITIES)
+         ============================================================== -->
+    <section id="services" class="editorial-section section-bordered">
+      <div class="container">
+
+        <div class="section-label-row">
+          <span class="section-num">02</span>
+          <span class="section-title-label">CORE EXPERTISE &amp; SERVICES</span>
+        </div>
+
+        <div class="services-matrix">
+
+          <!-- Service 1 -->
+          <div class="matrix-card">
+            <div class="matrix-top">
+              <span class="matrix-index">01</span>
+              <span class="matrix-badge">Operations</span>
+            </div>
+            <h3 class="matrix-heading">Business Operations &amp; Team Management</h3>
+            <p class="matrix-body">
+              On-site team recruitment, residential accommodation logistics, daily scheduling, supplier management, and rapid conflict resolution under pressure.
+            </p>
+            <ul class="matrix-pills">
+              <li>Staff Recruitment</li>
+              <li>Workforce Housing Logistics</li>
+              <li>Vendor Coordination</li>
+              <li>Crisis Resolution</li>
+            </ul>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="matrix-card">
+            <div class="matrix-top">
+              <span class="matrix-index">02</span>
+              <span class="matrix-badge">Finance</span>
+            </div>
+            <h3 class="matrix-heading">Financial Accounting &amp; Tally ERP</h3>
+            <p class="matrix-body">
+              Certified by Tally Academy. Accurate double-entry ledger bookkeeping, daily cash drawer audits, billing, GST filing entries, and bank reconciliation.
+            </p>
+            <ul class="matrix-pills">
+              <li>Tally Prime / ERP</li>
+              <li>Ledger &amp; Cashflow Audits</li>
+              <li>Invoicing &amp; GST Entries</li>
+              <li>Cashier Administration</li>
+            </ul>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="matrix-card featured-matrix">
+            <div class="matrix-top">
+              <span class="matrix-index">03</span>
+              <span class="matrix-badge highlight-badge">Development</span>
+            </div>
+            <h3 class="matrix-heading">Mobile &amp; Web Product Engineering</h3>
+            <p class="matrix-body">
+              Custom Android apps (Flutter/Dart) and ultra-fast responsive web portals built with 100% client code ownership, automated WhatsApp hooks, and zero server rent.
+            </p>
+            <ul class="matrix-pills">
+              <li>Flutter &amp; Android APKs</li>
+              <li>Modern Responsive Web</li>
+              <li>₹0 Server Hosting</li>
+              <li>Firebase &amp; Fast CDN</li>
+            </ul>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="matrix-card">
+            <div class="matrix-top">
+              <span class="matrix-index">04</span>
+              <span class="matrix-badge">Automation</span>
+            </div>
+            <h3 class="matrix-heading">Workflows &amp; AI-Driven Assistance</h3>
+            <p class="matrix-body">
+              Implementing practical automations and 24/7 conversational customer assistance agents that capture leads and confirm booking slots directly to WhatsApp.
+            </p>
+            <ul class="matrix-pills">
+              <li>Automated Booking Flows</li>
+              <li>Lead Capture Workflows</li>
+              <li>WhatsApp API Triggers</li>
+              <li>Admin Telemetry</li>
+            </ul>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="matrix-card">
+            <div class="matrix-top">
+              <span class="matrix-index">05</span>
+              <span class="matrix-badge highlight-badge">SMM &amp; Media</span>
+            </div>
+            <h3 class="matrix-heading">Social Media Marketing (SMM) &amp; Gaming Hub</h3>
+            <p class="matrix-body">
+              Built and scaling the complete Shunan Games brand (<a href="https://shunangames.web.app" target="_blank" style="color:var(--accent-warm); text-decoration:underline;">shunangames.web.app</a>). Managing YouTube algorithm optimization, high-retention Reels, 4K walkthroughs, and gaming news editorial.
+            </p>
+            <ul class="matrix-pills">
+              <li>shunangames.web.app</li>
+              <li>Social Media Marketing (SMM)</li>
+              <li>YouTube Growth &amp; SEO</li>
+              <li>Viral Shorts &amp; Reels</li>
+              <li>OBS Livestream Setups</li>
+            </ul>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="matrix-card">
+            <div class="matrix-top">
+              <span class="matrix-index">06</span>
+              <span class="matrix-badge">Growth</span>
+            </div>
+            <h3 class="matrix-heading">Local Search (SEO) &amp; Footfall Growth</h3>
+            <p class="matrix-body">
+              Dominating local Google Business &amp; Maps search queries, optimizing service catalogs, and orchestrating targeted social campaigns that bring paying clients.
+            </p>
+            <ul class="matrix-pills">
+              <li>Google Maps Ranking</li>
+              <li>Local Service Menus</li>
+              <li>Meta / Instagram Ads</li>
+              <li>Conversion Optimization</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================================
+         SECTION: WHAT I HAVE DONE (SELECTED WORK & CASE STUDIES)
+         ============================================================== -->
+    <section id="work" class="editorial-section">
+      <div class="container">
+
+        <div class="section-label-row">
+          <span class="section-num">03</span>
+          <span class="section-title-label">SELECTED PRODUCTION WORK</span>
+        </div>
+
+        <div class="work-header-flex">
+          <div>
+            <h2 class="editorial-headline">Tangible proofs of execution.</h2>
+            <p class="editorial-subline">Real applications, websites, and dashboards deployed in active use.</p>
+          </div>
+
+          <!-- Segmented Filter Control -->
+          <div class="segmented-control">
+            <button class="seg-btn active" data-filter="all" onclick="filterGallery('all', this)">All</button>
+            <button class="seg-btn" data-filter="apps" onclick="filterGallery('apps', this)">Mobile</button>
+            <button class="seg-btn" data-filter="web" onclick="filterGallery('web', this)">Web</button>
+            <button class="seg-btn" data-filter="admin" onclick="filterGallery('admin', this)">Operations</button>
+            <button class="seg-btn" data-filter="media" onclick="filterGallery('media', this)">Media</button>
+          </div>
+        </div>
+
+        <!-- Case Studies Gallery Grid -->
+        <div class="case-studies-grid">
+
+          <!-- Project 1: Nalavya -->
+          <article class="case-card" data-category="apps">
+            <div class="case-visual" onclick="openInspector('assets/showcase_app_ui.jpg', 'Nalavya Play — Cognitive Kids Learning & Game App', 'https://nalavya-admin.vercel.app/apk/nalavya_update.apk', 'Download Android APK')">
+              <img src="assets/showcase_app_ui.jpg" alt="Nalavya Play App" class="case-img" loading="lazy">
+              <div class="case-live-tag">
+                <span class="dot-amber">●</span> ANDROID APK
+              </div>
+              <span class="case-zoom-label">Inspect ↗</span>
+            </div>
+            <div class="case-body">
+              <div class="case-meta-line">
+                <span class="case-client">Mobile Product</span>
+                <span class="case-year">2026</span>
+              </div>
+              <h3 class="case-title">Nalavya Play (Nalavya 2.0)</h3>
+              <p class="case-summary">
+                Early childhood cognitive educational mobile application engineered in Flutter. Features interactive mini-games, number explorers, puzzle mechanics, and child-safe touch controls.
+              </p>
+              <div class="case-pills-row">
+                <span>Flutter</span>
+                <span>Dart</span>
+                <span>Child UI/UX</span>
+                <span>Game Design</span>
+              </div>
+              <div class="case-footer-actions">
+                <a href="https://nalavya-admin.vercel.app/apk/nalavya_update.apk" target="_blank" class="btn-case-primary">
+                  <span>Download APK (Direct)</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                </a>
+                <button class="btn-case-secondary" onclick="openInspector('assets/showcase_app_ui.jpg', 'Nalavya Play — Cognitive Kids Learning & Game App', 'https://nalavya-admin.vercel.app/apk/nalavya_update.apk', 'Download Android APK')">
+                  <span>Screenshots</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: PropZen Realty -->
+          <article class="case-card" data-category="web">
+            <div class="case-visual" onclick="openInspector('assets/showcase_web_ui.jpg', 'PropZen Realty — Property Discovery Portal', 'https://propzenrealty.com', 'Visit Live Portal')">
+              <img src="assets/showcase_web_ui.jpg" alt="PropZen Realty" class="case-img" loading="lazy">
+              <div class="case-live-tag live-green">
+                <span class="dot-green">●</span> LIVE IN PRODUCTION
+              </div>
+              <span class="case-zoom-label">Inspect ↗</span>
+            </div>
+            <div class="case-body">
+              <div class="case-meta-line">
+                <span class="case-client">propzenrealty.com</span>
+                <span class="case-year">2026</span>
+              </div>
+              <h3 class="case-title">PropZen Realty Portal</h3>
+              <p class="case-summary">
+                Commercial real estate lead-generation platform. High-speed listing catalog with locality filters, high-resolution media previews, and direct 1-tap WhatsApp agent inquiries.
+              </p>
+              <div class="case-pills-row">
+                <span>High Speed</span>
+                <span>Lead Gen</span>
+                <span>WhatsApp API</span>
+                <span>Fast CDN</span>
+              </div>
+              <div class="case-footer-actions">
+                <a href="https://propzenrealty.com" target="_blank" class="btn-case-primary">
+                  <span>Visit Live Site</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <button class="btn-case-secondary" onclick="openInspector('assets/showcase_web_ui.jpg', 'PropZen Realty — Property Discovery Portal', 'https://propzenrealty.com', 'Visit Live Portal')">
+                  <span>Screenshots</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: AH Family Salon -->
+          <article class="case-card" data-category="web">
+            <div class="case-visual" onclick="openInspector('assets/showcase_booking_ui.jpg', 'AH Family Salon — Booking System & Service Menu', 'https://ahfamilysalon.in', 'Visit Live Salon Site')">
+              <img src="assets/showcase_booking_ui.jpg" alt="AH Family Salon" class="case-img" loading="lazy">
+              <div class="case-live-tag live-green">
+                <span class="dot-green">●</span> LIVE PRODUCTION
+              </div>
+              <span class="case-zoom-label">Inspect ↗</span>
+            </div>
+            <div class="case-body">
+              <div class="case-meta-line">
+                <span class="case-client">ahfamilysalon.in</span>
+                <span class="case-year">2026</span>
+              </div>
+              <h3 class="case-title">AH Family Salon &amp; Icon Salon</h3>
+              <p class="case-summary">
+                Modern salon booking webapp with digital price list, package breakdown, customer reviews, Google Maps direction routing, and streamlined WhatsApp slot reservations.
+              </p>
+              <div class="case-pills-row">
+                <span>Local SEO</span>
+                <span>Pricing Catalog</span>
+                <span>Slot Booking</span>
+                <span>Google Business</span>
+              </div>
+              <div class="case-footer-actions">
+                <a href="https://ahfamilysalon.in" target="_blank" class="btn-case-primary">
+                  <span>Visit Live Site</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <button class="btn-case-secondary" onclick="openInspector('assets/showcase_booking_ui.jpg', 'AH Family Salon — Booking System & Service Menu', 'https://ahfamilysalon.in', 'Visit Live Salon Site')">
+                  <span>Screenshots</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: MRAJ Farmer Operations Hub -->
+          <article class="case-card" data-category="admin">
+            <div class="case-visual" onclick="openInspector('assets/showcase_admin_ui.jpg', 'MRAJ Farmer Enterprise Operations & Accounting System')">
+              <img src="assets/showcase_admin_ui.jpg" alt="MRAJ Farmer Operations" class="case-img" loading="lazy">
+              <div class="case-live-tag">
+                <span>ENTERPRISE HUB</span>
+              </div>
+              <span class="case-zoom-label">Inspect ↗</span>
+            </div>
+            <div class="case-body">
+              <div class="case-meta-line">
+                <span class="case-client">MRAJ Farmer</span>
+                <span class="case-year">2024–2026</span>
+              </div>
+              <h3 class="case-title">MRAJ Farmer ERP &amp; Operations</h3>
+              <p class="case-summary">
+                Comprehensive operational backbone coordinating field stock updates, workforce recruitment schedules, employee residential accommodation, and double-entry accounting ledgers.
+              </p>
+              <div class="case-pills-row">
+                <span>Staff Logistics</span>
+                <span>Accommodation</span>
+                <span>Tally Accounting</span>
+                <span>Live Status</span>
+              </div>
+              <div class="case-footer-actions">
+                <button class="btn-case-primary" onclick="openInspector('assets/showcase_admin_ui.jpg', 'MRAJ Farmer Enterprise Operations & Accounting System')">
+                  <span>View Operations Dashboard</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Shunan Expo Studio -->
+          <article class="case-card" data-category="web">
+            <div class="case-visual" onclick="openInspector('assets/showcase_ecommerce.jpg', 'Shunan Expo Studio — Modern Web & App Studio', 'https://shunanexpo.web.app', 'Visit Studio Portal')">
+              <img src="assets/showcase_ecommerce.jpg" alt="Shunan Expo Studio" class="case-img" loading="lazy">
+              <div class="case-live-tag live-green">
+                <span class="dot-green">●</span> LIVE PRODUCTION
+              </div>
+              <span class="case-zoom-label">Inspect ↗</span>
+            </div>
+            <div class="case-body">
+              <div class="case-meta-line">
+                <span class="case-client">shunanexpo.web.app</span>
+                <span class="case-year">2026</span>
+              </div>
+              <h3 class="case-title">Shunan Expo Studio Portal</h3>
+              <p class="case-summary">
+                Commercial digital studio portal engineered with ₹0 recurring server hosting cost, responsive service scope matrix, client case studies, and instant consultation workflows.
+              </p>
+              <div class="case-pills-row">
+                <span>₹0 Server Cost</span>
+                <span>Client Code Ownership</span>
+                <span>High Performance</span>
+              </div>
+              <div class="case-footer-actions">
+                <a href="https://shunanexpo.web.app" target="_blank" class="btn-case-primary">
+                  <span>Visit shunanexpo.web.app</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <button class="btn-case-secondary" onclick="openInspector('assets/showcase_ecommerce.jpg', 'Shunan Expo Studio — Modern Web & App Studio', 'https://shunanexpo.web.app', 'Visit Studio Portal')">
+                  <span>Screenshots</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: Custom Admin & Telemetry Dashboards -->
+          <article class="case-card" data-category="admin">
+            <div class="case-visual" onclick="openInspector('assets/web_admin_dashboard.jpg', 'Custom Admin Telemetry & Business Analytics Dashboard')">
+              <img src="assets/web_admin_dashboard.jpg" alt="Telemetry Dashboard" class="case-img" loading="lazy">
+              <div class="case-live-tag">
+                <span>ANALYTICS SUITE</span>
+              </div>
+              <span class="case-zoom-label">Inspect ↗</span>
+            </div>
+            <div class="case-body">
+              <div class="case-meta-line">
+                <span class="case-client">Internal Telemetry</span>
+                <span class="case-year">2026</span>
+              </div>
+              <h3 class="case-title">Telemetry &amp; Operations Console</h3>
+              <p class="case-summary">
+                Centralized dashboard console monitoring serverless uptime, user activity, client order requests, speed telemetry, and revenue metrics with clean reactive visualizations.
+              </p>
+              <div class="case-pills-row">
+                <span>Telemetry</span>
+                <span>Real-Time Charts</span>
+                <span>Operations KPI</span>
+              </div>
+              <div class="case-footer-actions">
+                <button class="btn-case-primary" onclick="openInspector('assets/web_admin_dashboard.jpg', 'Custom Admin Telemetry & Business Analytics Dashboard')">
+                  <span>View Console UI</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 7: 24/7 AI Lead & Support Automations -->
+          <article class="case-card" data-category="media">
+            <div class="case-visual" onclick="openInspector('assets/showcase_ai_agent.jpg', 'Autonomous 24/7 AI Customer Support & Booking Agent')">
+              <img src="assets/showcase_ai_agent.jpg" alt="AI Agent" class="case-img" loading="lazy">
+              <div class="case-live-tag">
+                <span>AUTOMATION</span>
+              </div>
+              <span class="case-zoom-label">Inspect ↗</span>
+            </div>
+            <div class="case-body">
+              <div class="case-meta-line">
+                <span class="case-client">Automated Workflow</span>
+                <span class="case-year">2026</span>
+              </div>
+              <h3 class="case-title">24/7 Conversational Lead Agents</h3>
+              <p class="case-summary">
+                Conversational agents deployed on client web properties that answer visitor queries, filter high-intent leads, and schedule appointments directly to WhatsApp without staff intervention.
+              </p>
+              <div class="case-pills-row">
+                <span>Lead Routing</span>
+                <span>Auto Scheduling</span>
+                <span>Zero Overhead</span>
+              </div>
+              <div class="case-footer-actions">
+                <button class="btn-case-primary" onclick="openInspector('assets/showcase_ai_agent.jpg', 'Autonomous 24/7 AI Customer Support & Booking Agent')">
+                  <span>View Architecture</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 8: Shunan Games Media & SMM Webapp -->
+          <article class="case-card" data-category="web media">
+            <div class="case-visual" onclick="openInspector('assets/shunangames_hero.png', 'Shunan Games — 4K 60FPS Walkthrough Hub, News & SMM Portal', 'https://shunangames.web.app', 'Visit shunangames.web.app')">
+              <img src="assets/shunangames_hero.png" alt="Shunan Games Portal" class="case-img" loading="lazy">
+              <div class="case-live-tag live-green">
+                <span class="dot-green">●</span> LIVE PRODUCTION
+              </div>
+              <span class="case-zoom-label">Inspect ↗</span>
+            </div>
+            <div class="case-body">
+              <div class="case-meta-line">
+                <span class="case-client">shunangames.web.app</span>
+                <span class="case-year">2022–2026</span>
+              </div>
+              <h3 class="case-title">Shunan Games — Walkthrough Hub, News &amp; SMM Studio</h3>
+              <p class="case-summary">
+                High-performance 4K 60FPS walkthrough hub and gaming news web portal (<a href="https://shunangames.web.app" target="_blank" style="color:var(--accent-warm); text-decoration:underline;">shunangames.web.app</a>). Features interactive walkthrough series, PC FPS Calculator benchmark engine, breaking gaming news, Google AdSense monetization, and multi-channel social media marketing (YouTube &amp; Instagram).
+              </p>
+              <div class="case-pills-row">
+                <span>shunangames.web.app</span>
+                <span>Social Media (SMM)</span>
+                <span>4K 60FPS Video</span>
+                <span>FPS Benchmark Tool</span>
+                <span>Firebase Hosting</span>
+                <span>Gaming News Hub</span>
+              </div>
+
+              <!-- Quick Gallery Strip for Shunan Games Screenshots -->
+              <div class="mini-gallery-strip">
+                <img src="assets/shunangames_hero.png" alt="Hero Hub" title="Walkthrough Hub" onclick="openInspector('assets/shunangames_hero.png', 'Shunan Games — 4K Walkthrough Hub', 'https://shunangames.web.app', 'Visit Live Portal')">
+                <img src="assets/shunangames_fps_calc.png" alt="FPS Calculator" title="PC FPS Calculator Tool" onclick="openInspector('assets/shunangames_fps_calc.png', 'Shunan Games — PC FPS Benchmark & Diagnostics Tool', 'https://shunangames.web.app', 'Visit Live Portal')">
+                <img src="assets/shunangames_rdr2_player.png" alt="RDR2 Player" title="4K Video Playthrough & Lore" onclick="openInspector('assets/shunangames_rdr2_player.png', 'Shunan Games — 4K Gameplay & Lore Page', 'https://shunangames.web.app', 'Visit Live Portal')">
+                <img src="assets/shunangames_news.png" alt="Gaming News" title="Verified News & Leaks" onclick="openInspector('assets/shunangames_news.png', 'Shunan Games — Verified Gaming News & Leaks', 'https://shunangames.web.app', 'Visit Live Portal')">
+              </div>
+
+              <div class="case-footer-actions">
+                <a href="https://shunangames.web.app" target="_blank" class="btn-case-primary">
+                  <span>Visit shunangames.web.app ↗</span>
+                </a>
+                <button class="btn-case-secondary" onclick="openInspector('assets/shunangames_hero.png', 'Shunan Games — 4K 60FPS Walkthrough Hub, News & SMM Portal', 'https://shunangames.web.app', 'Visit Live Portal')">
+                  <span>Screenshots</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================================
+         SECTION: CAREER TRACK & ROLES HELD
+         ============================================================== -->
+    <section id="experience" class="editorial-section section-bordered">
+      <div class="container">
+
+        <div class="section-label-row">
+          <span class="section-num">04</span>
+          <span class="section-title-label">EMPLOYMENT &amp; POSITIONS HELD</span>
+        </div>
+
+        <div class="timeline-records">
+
+          <!-- Role 1 -->
+          <div class="record-row">
+            <div class="record-meta">
+              <span class="record-dates">Nov 2024 – Feb 2026</span>
+              <span class="record-loc">Gadamara, WB</span>
+            </div>
+            <div class="record-content">
+              <div class="record-headline-line">
+                <h3 class="record-role">Manager &amp; Accountant</h3>
+                <span class="record-company">MRAJ FARMER</span>
+              </div>
+              <p class="record-summary">
+                Executive operational and financial leadership for commercial agriculture logistics, workforce accommodation, and bookkeeping.
+              </p>
+              <ul class="record-bullets">
+                <li>Directed staff recruitment, workforce onboarding, and residential accommodation management for on-site employees.</li>
+                <li>Managed daily accounting, double-entry ledger reconciliations, supplier payments, and expense audits.</li>
+                <li>Supervised real-time tracking of agricultural field dispatches and supply chain movement.</li>
+              </ul>
+              <div class="record-tags">
+                <span>Staff Management</span>
+                <span>Accountant</span>
+                <span>Logistics</span>
+                <span>Accommodation</span>
+                <span>Live Tracking</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 2 -->
+          <div class="record-row">
+            <div class="record-meta">
+              <span class="record-dates">Jun 2022 – Mar 2025</span>
+              <span class="record-loc">Newtown, Kolkata</span>
+            </div>
+            <div class="record-content">
+              <div class="record-headline-line">
+                <h3 class="record-role">Platform Lead, SMM &amp; Content Producer</h3>
+                <span class="record-company">SHUNAN GAMES (shunangames.web.app)</span>
+              </div>
+              <p class="record-summary">
+                Founded and scaled the complete Shunan Games web portal and creator brand, producing 4K walkthroughs, interactive PC web tools, and multi-channel SMM content.
+              </p>
+              <ul class="record-bullets">
+                <li>Architected and deployed <a href="https://shunangames.web.app" target="_blank" style="color:var(--accent-warm); text-decoration:underline;">shunangames.web.app</a> with walkthrough series, FPS calculator, and news radar.</li>
+                <li>Engineered high-retention video editing and YouTube SEO workflows that drove consistent organic search discovery.</li>
+                <li>Managed cross-platform social media distribution and brand growth across YouTube and Instagram (@shunanians).</li>
+              </ul>
+              <div class="record-tags">
+                <span>shunangames.web.app</span>
+                <span>Social Media Marketing (SMM)</span>
+                <span>Content Creation</span>
+                <span>Video Editing</span>
+                <span>Livestreaming</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 3 -->
+          <div class="record-row">
+            <div class="record-meta">
+              <span class="record-dates">Aug 2022 – Oct 2024</span>
+              <span class="record-loc">Newtown, Kolkata</span>
+            </div>
+            <div class="record-content">
+              <div class="record-headline-line">
+                <h3 class="record-role">Social Media Manager, SEO &amp; Operations Lead</h3>
+                <span class="record-company">ICON UNISEX SALON / AH SALON</span>
+              </div>
+              <p class="record-summary">
+                Supervised digital marketing, local Google search domination, floor stock inventory, and daily front-counter revenue logs.
+              </p>
+              <ul class="record-bullets">
+                <li>Ranked the business at the top of local Google Maps searches, generating consistent daily walk-in customer inquiries.</li>
+                <li>Supervised salon inventory, cosmetics stock re-orders, staff shift schedules, and cashier auditing.</li>
+                <li>Created and deployed the digital service catalog and 1-tap WhatsApp slot reservation portal.</li>
+              </ul>
+              <div class="record-tags">
+                <span>Local SEO</span>
+                <span>Store Management</span>
+                <span>Stock Control</span>
+                <span>Advertising</span>
+                <span>Bookkeeping</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 4 -->
+          <div class="record-row">
+            <div class="record-meta">
+              <span class="record-dates">Sep 2020 – Jun 2022</span>
+              <span class="record-loc">Kolkata</span>
+            </div>
+            <div class="record-content">
+              <div class="record-headline-line">
+                <h3 class="record-role">Office Administrator &amp; Business Developer</h3>
+                <span class="record-company">CORPORATE SERVICES</span>
+              </div>
+              <p class="record-summary">
+                Coordinated administrative operations, recruitment pipelines, business analytics, and internal IT workstation troubleshooting.
+              </p>
+              <ul class="record-bullets">
+                <li>Supported business development pipelines through market intelligence, prospective client outreach, and campaign tracking.</li>
+                <li>Managed talent screening, interview coordination, and onboarding documentation.</li>
+                <li>Handled daily petty cash, ledger entries, and workstation IT hardware/network support.</li>
+              </ul>
+              <div class="record-tags">
+                <span>Business Development</span>
+                <span>Recruiter</span>
+                <span>Office Admin</span>
+                <span>Accounting</span>
+                <span>IT Support</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 5 -->
+          <div class="record-row">
+            <div class="record-meta">
+              <span class="record-dates">May 2019 – Aug 2020</span>
+              <span class="record-loc">Howrah</span>
+            </div>
+            <div class="record-content">
+              <div class="record-headline-line">
+                <h3 class="record-role">Internet Cafe Manager &amp; Service Executive</h3>
+                <span class="record-company">CYBER SERVICE CAFE</span>
+              </div>
+              <p class="record-summary">
+                Supervised customer transactions, digital documentation, online banking assistance, cash counter operations, and PC repairs.
+              </p>
+              <ul class="record-bullets">
+                <li>Assisted high daily walk-in volumes with digital banking, online government forms, and documentation.</li>
+                <li>Managed daily cash drawer auditing and banking reconciliations.</li>
+                <li>Maintained local cafe computer networks, applied OS updates, and executed PC hardware repairs.</li>
+              </ul>
+              <div class="record-tags">
+                <span>Customer Operations</span>
+                <span>Cashier</span>
+                <span>Banking</span>
+                <span>Computer Repairing</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================================
+         SECTION: CREDENTIALS & LANGUAGES
+         ============================================================== -->
+    <section id="credentials" class="editorial-section">
+      <div class="container">
+
+        <div class="section-label-row">
+          <span class="section-num">05</span>
+          <span class="section-title-label">FORMAL QUALIFICATIONS &amp; LANGUAGES</span>
+        </div>
+
+        <div class="qualifications-split">
+
+          <!-- Left: Education & Certs -->
+          <div class="qual-col">
+            <div class="qual-card">
+              <div class="qual-icon">🎓</div>
+              <div>
+                <span class="qual-type">FORMAL EDUCATION • 2018</span>
+                <h3 class="qual-title">Associate of Science | Computer Science</h3>
+                <p class="qual-org">Swami Vivekanand International Jr College, Mumbai, MH</p>
+                <p class="qual-text">Foundational study in computing principles, software engineering logic, and hardware systems.</p>
+              </div>
+            </div>
+
+            <div class="qual-card">
+              <div class="qual-icon">📜</div>
+              <div>
+                <span class="qual-type">PROFESSIONAL CERTIFICATION</span>
+                <h3 class="qual-title">Accounting &amp; Tally Professional</h3>
+                <p class="qual-org">Tally Academy, Barasat, West Bengal</p>
+                <p class="qual-text">Practical certification in double-entry bookkeeping, trial balance, GST entries, and financial statements.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Languages -->
+          <div class="languages-panel">
+            <h3 class="panel-heading">Spoken &amp; Written Languages</h3>
+            <p class="panel-desc">Comfortable collaborating with multi-lingual teams and regional client bases.</p>
+
+            <div class="lang-meters">
+              
+              <div class="lang-row">
+                <div class="lang-info">
+                  <strong>Bengali</strong>
+                  <span>Native / Mother Tongue</span>
+                </div>
+                <div class="track-bar"><div class="track-fill" style="width: 100%;"></div></div>
+              </div>
+
+              <div class="lang-row">
+                <div class="lang-info">
+                  <strong>Hindi</strong>
+                  <span>Proficient (C2)</span>
+                </div>
+                <div class="track-bar"><div class="track-fill" style="width: 95%;"></div></div>
+              </div>
+
+              <div class="lang-row">
+                <div class="lang-info">
+                  <strong>English</strong>
+                  <span>Upper Intermediate (B2)</span>
+                </div>
+                <div class="track-bar"><div class="track-fill" style="width: 80%;"></div></div>
+              </div>
+
+              <div class="lang-row">
+                <div class="lang-info">
+                  <strong>Marathi</strong>
+                  <span>Elementary (A2)</span>
+                </div>
+                <div class="track-bar"><div class="track-fill" style="width: 45%;"></div></div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================================
+         SECTION: MINIMALIST DIRECT CONTACT SECTION
+         ============================================================== -->
+    <section id="contact" class="contact-curtain">
+      <div class="container">
+        
+        <div class="contact-slab">
+          <div class="slab-content">
+            <span class="slab-badge">LET'S CONNECT</span>
+            <h2 class="slab-title">Have a role or project in mind?</h2>
+            <p class="slab-para">
+              Whether you need hands-on operations management, audited accounting in Tally, or a modern digital product built and shipped — reach out directly via WhatsApp or email.
+            </p>
+          </div>
+
+          <div class="slab-actions">
+            <a href="https://wa.me/919007707714?text=Hi%20Sourav,%20I'm%20reaching%20out%20regarding%20an%20opportunity!" target="_blank" class="slab-btn-wa">
+              <span class="wa-symbol">💬</span>
+              <div class="btn-text-block">
+                <strong>Start WhatsApp Conversation</strong>
+                <span>Direct &amp; Fast Response</span>
+              </div>
+              <span class="arrow-glyph">→</span>
+            </a>
+
+            <button class="slab-btn-email" onclick="copyContactText('shunanexpo@gmail.com', 'Copied shunanexpo@gmail.com to clipboard')">
+              <span class="email-symbol">✉️</span>
+              <div class="btn-text-block">
+                <strong>shunanexpo@gmail.com</strong>
+                <span>Click to copy email address</span>
+              </div>
+              <span class="copy-tag">COPY</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==============================================================
+       STUDIO FOOTER
+       ============================================================== -->
+  <footer class="studio-footer">
+    <div class="container footer-layout">
+      <div class="footer-identity">
+        <span class="f-brand-title">Sourav S. Panja</span>
+        <span class="f-brand-sub">Operations Leader • Certified Accountant • Product Developer</span>
+      </div>
+
+      <div class="footer-channels">
+        <a href="https://wa.me/919007707714" target="_blank" class="f-channel">WhatsApp</a>
+        <a href="mailto:shunanexpo@gmail.com" class="f-channel">Email</a>
+        <a href="https://linkedin.com/in/shunanexpo" target="_blank" class="f-channel">LinkedIn</a>
+        <a href="https://youtube.com/@shunanexpo" target="_blank" class="f-channel">YouTube</a>
+        <a href="https://instagram.com/shunanians" target="_blank" class="f-channel">Instagram</a>
+      </div>
+
+      <p class="f-colophon">
+        © 2026 Sourav S. Panja. Designed with craft, clarity, and ₹0 server rent architecture.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ==============================================================
+       MOBILE NATIVE BOTTOM DOCK (IOS / ANDROID REFINED)
+       ============================================================== -->
+  <nav class="studio-bottom-dock">
+    <button class="dock-tab active" onclick="dockNavigate('hero', this)">
+      <span class="dock-glyph">🏠</span>
+      <span class="dock-name">Overview</span>
+    </button>
+    <button class="dock-tab" onclick="dockNavigate('services', this)">
+      <span class="dock-glyph">⚡</span>
+      <span class="dock-name">Expertise</span>
+    </button>
+    <button class="dock-tab" onclick="dockNavigate('work', this)">
+      <span class="dock-glyph">🚀</span>
+      <span class="dock-name">Work</span>
+    </button>
+    <button class="dock-tab" onclick="dockNavigate('experience', this)">
+      <span class="dock-glyph">💼</span>
+      <span class="dock-name">Career</span>
+    </button>
+    <a href="https://wa.me/919007707714?text=Hi%20Sourav,%20I'm%20contacting%20you%20from%20your%20portfolio" target="_blank" class="dock-tab dock-wa-pill">
+      <span class="dock-glyph">💬</span>
+      <span class="dock-name">WhatsApp</span>
+    </a>
+  </nav>
+
+  <!-- ==============================================================
+       CASE STUDY INSPECTOR MODAL (CLEAN LIGHTBOX)
+       ============================================================== -->
+  <div id="inspectorModal" class="inspector-curtain" onclick="closeInspector(event)">
+    <div class="inspector-window" onclick="event.stopPropagation()">
+      <div class="inspector-grab-bar" onclick="closeInspector()"></div>
+      <div class="inspector-header">
+        <h3 id="inspectorTitle" class="inspector-heading">Work Preview</h3>
+        <button class="inspector-exit-btn" onclick="closeInspector()">&times;</button>
+      </div>
+      <div class="inspector-viewport">
+        <img id="inspectorImage" src="" alt="Screenshot" class="inspector-preview-img">
+      </div>
+      <div class="inspector-footer">
+        <a id="inspectorActionBtn" href="https://wa.me/919007707714" target="_blank" class="btn-solid" style="display:none;">
+          <span>Visit Live / Demo</span>
+        </a>
+        <button class="btn-ghost" onclick="closeInspector()">
+          <span>Close Window</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST FEEDBACK -->
+  <div id="studioToast" class="studio-toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
