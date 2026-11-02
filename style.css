@@ -487,18 +487,27 @@ body.theme-light .dock-slider {
   transform: scale(0.96);
 }
 
-/* Responsive Mobile Header Polish (Zero Crowding / Zero Overlap) */
-@media (max-width: 640px) {
+/* Responsive Mobile & Tablet Header Polish (Zero Crowding / Maximum Breathing Room) */
+@media (max-width: 768px) {
+  .status-loc {
+    display: none !important;
+  }
+
   .app-header .container {
-    padding: 0 clamp(10px, 3vw, 14px);
+    padding: 0 clamp(10px, 3.5vw, 16px);
   }
 
   .header-inner {
-    gap: 8px;
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  .brand-zone {
+    flex-shrink: 0;
   }
 
   .brand-profile-pill {
-    padding: 2px 8px 2px 2px;
+    padding: 3px 10px 3px 3px;
     gap: 8px;
   }
 
@@ -509,6 +518,7 @@ body.theme-light .dock-slider {
 
   .brand-name {
     font-size: 0.86rem;
+    font-weight: 700;
   }
 
   .brand-status {
@@ -517,29 +527,31 @@ body.theme-light .dock-slider {
   }
 
   .header-actions {
-    gap: 6px;
+    flex-shrink: 0;
+    gap: 8px;
   }
 
   .icon-tool-btn {
     width: 34px;
     height: 34px;
-    font-size: 0.86rem;
+    font-size: 0.85rem;
   }
 
   .btn-action-wa {
-    padding: 7px 11px;
+    padding: 6px 11px;
     font-size: 0.78rem;
     gap: 5px;
+    border-radius: var(--radius-sm);
   }
 }
 
 @media (max-width: 440px) {
-  .status-loc {
-    display: none;
+  .app-header .container {
+    padding: 0 10px;
   }
 
   .brand-profile-pill {
-    padding: 2px 6px 2px 2px;
+    padding: 2px 7px 2px 2px;
     gap: 6px;
   }
 
@@ -550,6 +562,10 @@ body.theme-light .dock-slider {
 
   .brand-name {
     font-size: 0.82rem;
+  }
+
+  .header-actions {
+    gap: 6px;
   }
 
   .icon-tool-btn {
@@ -565,12 +581,14 @@ body.theme-light .dock-slider {
 
 @media (max-width: 360px) {
   .btn-wa-text {
-    display: none;
+    display: none !important;
   }
 
   .btn-action-wa {
-    padding: 7px;
-    border-radius: var(--radius-sm);
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    justify-content: center;
   }
 }
 
