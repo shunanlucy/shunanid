@@ -138,11 +138,37 @@
           <!-- Hero Right: Portrait & Quick Connect Strip -->
           <div class="hero-right-col">
             <div class="portrait-sculpture">
-              <div class="portrait-frame">
-                <img src="assets/sourav_portrait_hero.jpg" alt="Sourav S. Panja" class="portrait-img">
-                <div class="portrait-caption-tag">
+              <div class="portrait-frame" id="portraitFrame">
+                <!-- Living Cinematic Reel Video (Autoplay, Loop, Muted, Playsinline) -->
+                <video id="heroVideo" class="portrait-video active" autoplay loop muted playsinline preload="auto" poster="assets/sourav_reel_poster.jpg">
+                  <source src="assets/sourav_reel_1080p.mp4" type="video/mp4">
+                </video>
+
+                <!-- High-Resolution Still Portrait Alternative -->
+                <img id="heroPhoto" src="assets/sourav_portrait_hero.jpg" alt="Sourav S. Panja" class="portrait-img">
+
+                <!-- Media Switcher (Reel vs Photo) -->
+                <div class="portrait-mode-switcher" role="group" aria-label="Media Mode">
+                  <button type="button" class="mode-switch-btn active" id="btnModeReel" onclick="setHeroMediaMode('reel')" title="Watch Cinematic Reel">
+                    <span class="mode-switch-icon">🎥</span>
+                    <span>Reel</span>
+                  </button>
+                  <button type="button" class="mode-switch-btn" id="btnModePhoto" onclick="setHeroMediaMode('photo')" title="View Still Portrait">
+                    <span class="mode-switch-icon">📷</span>
+                    <span>Photo</span>
+                  </button>
+                </div>
+
+                <!-- Floating Sound Toggle for Video Reel -->
+                <button type="button" class="portrait-sound-btn" id="btnReelSound" onclick="toggleHeroReelSound(event)" aria-label="Toggle Audio" title="Toggle Sound">
+                  <span id="soundIcon">🔇</span>
+                  <span class="sound-label" id="soundLabel">Muted</span>
+                </button>
+
+                <!-- Dynamic Bottom Tag -->
+                <div class="portrait-caption-tag" id="portraitCaption">
                   <span class="caption-dot"></span>
-                  <span>On-Site &amp; Remote Ready</span>
+                  <span id="portraitCaptionText">Kolkata • On The Ground</span>
                 </div>
               </div>
 

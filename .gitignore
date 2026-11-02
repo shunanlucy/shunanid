@@ -2,3 +2,6 @@
 Thumbs.db
 *.swp
 *~
+# Master raw user uploads (preserved locally on disk)
+lv_0_*.mp4
+*.tmp

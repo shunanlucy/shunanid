@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTouchGestures();
   initSheetSwipeGestures();
   initDockObserver();
+  initHeroMedia();
 });
 
 // Update slider when fonts finish rendering
@@ -105,6 +106,100 @@ window.switchView = function(viewName, updateHash = true) {
 
   // 7. Instant Reset to Top
   window.scrollTo(0, 0);
+
+  // 8. Control Hero Reel Playback based on active view
+  const heroVideo = document.getElementById('heroVideo');
+  if (heroVideo) {
+    if (viewName === 'profile' && heroMediaMode === 'reel') {
+      heroVideo.play().catch(() => {});
+    } else {
+      heroVideo.pause();
+    }
+  }
+};
+
+/* -------------------------------------------------------------
+   HERO LIVING REEL & STILL PORTRAIT CONTROLLER
+   ------------------------------------------------------------- */
+let heroMediaMode = 'reel';
+
+function initHeroMedia() {
+  const video = document.getElementById('heroVideo');
+  if (!video) return;
+
+  video.muted = true;
+  video.setAttribute('muted', '');
+  video.setAttribute('playsinline', '');
+
+  const startPlay = () => {
+    video.play().catch(() => {});
+  };
+
+  startPlay();
+
+  // Ensure playback starts on first touch/click if strict autoplay policy blocked it
+  const playOnUserGesture = () => {
+    if (heroMediaMode === 'reel') {
+      video.play().catch(() => {});
+    }
+    window.removeEventListener('click', playOnUserGesture);
+    window.removeEventListener('touchstart', playOnUserGesture);
+  };
+  window.addEventListener('click', playOnUserGesture, { once: true, passive: true });
+  window.addEventListener('touchstart', playOnUserGesture, { once: true, passive: true });
+}
+
+window.setHeroMediaMode = function(mode) {
+  heroMediaMode = mode;
+  hapticPulse(6);
+  const video = document.getElementById('heroVideo');
+  const photo = document.getElementById('heroPhoto');
+  const btnReel = document.getElementById('btnModeReel');
+  const btnPhoto = document.getElementById('btnModePhoto');
+  const soundBtn = document.getElementById('btnReelSound');
+  const caption = document.getElementById('portraitCaptionText');
+
+  if (mode === 'reel') {
+    video?.classList.add('active');
+    photo?.classList.remove('active');
+    btnReel?.classList.add('active');
+    btnPhoto?.classList.remove('active');
+    soundBtn?.classList.remove('hidden');
+    if (caption) caption.textContent = 'Kolkata • On The Ground';
+    video?.play().catch(() => {});
+    triggerStudioToast('Living Reel Active');
+  } else {
+    video?.classList.remove('active');
+    photo?.classList.add('active');
+    btnReel?.classList.remove('active');
+    btnPhoto?.classList.add('active');
+    soundBtn?.classList.add('hidden');
+    if (caption) caption.textContent = 'On-Site & Remote Ready';
+    video?.pause();
+    triggerStudioToast('Still Portrait Active');
+  }
+};
+
+window.toggleHeroReelSound = function(e) {
+  if (e) e.stopPropagation();
+  hapticPulse(8);
+  const video = document.getElementById('heroVideo');
+  const icon = document.getElementById('soundIcon');
+  const label = document.getElementById('soundLabel');
+  if (!video) return;
+
+  if (video.muted) {
+    video.muted = false;
+    video.volume = 1.0;
+    if (icon) icon.textContent = '🔊';
+    if (label) label.textContent = 'Sound On';
+    triggerStudioToast('Audio Unmuted');
+  } else {
+    video.muted = true;
+    if (icon) icon.textContent = '🔇';
+    if (label) label.textContent = 'Muted';
+    triggerStudioToast('Audio Muted');
+  }
 };
 
 /* -------------------------------------------------------------
