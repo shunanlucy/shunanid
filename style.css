@@ -487,6 +487,93 @@ body.theme-light .dock-slider {
   transform: scale(0.96);
 }
 
+/* Responsive Mobile Header Polish (Zero Crowding / Zero Overlap) */
+@media (max-width: 640px) {
+  .app-header .container {
+    padding: 0 clamp(10px, 3vw, 14px);
+  }
+
+  .header-inner {
+    gap: 8px;
+  }
+
+  .brand-profile-pill {
+    padding: 2px 8px 2px 2px;
+    gap: 8px;
+  }
+
+  .avatar-ring {
+    width: 32px;
+    height: 32px;
+  }
+
+  .brand-name {
+    font-size: 0.86rem;
+  }
+
+  .brand-status {
+    font-size: 0.65rem;
+    gap: 4px;
+  }
+
+  .header-actions {
+    gap: 6px;
+  }
+
+  .icon-tool-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 0.86rem;
+  }
+
+  .btn-action-wa {
+    padding: 7px 11px;
+    font-size: 0.78rem;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 440px) {
+  .status-loc {
+    display: none;
+  }
+
+  .brand-profile-pill {
+    padding: 2px 6px 2px 2px;
+    gap: 6px;
+  }
+
+  .avatar-ring {
+    width: 30px;
+    height: 30px;
+  }
+
+  .brand-name {
+    font-size: 0.82rem;
+  }
+
+  .icon-tool-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .btn-action-wa {
+    padding: 6px 9px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .btn-wa-text {
+    display: none;
+  }
+
+  .btn-action-wa {
+    padding: 7px;
+    border-radius: var(--radius-sm);
+  }
+}
+
 /* =====================================================================
    APP STAGE & FLUID VIEW TRANSITIONS
    ===================================================================== */
